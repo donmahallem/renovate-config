@@ -1,0 +1,111 @@
+{
+            "automerge": true,
+            "dependencyDashboard": true,
+            "extends": [
+                "config:base",
+                ":prHourlyLimit4"
+            ],
+            "lockFileMaintenance": {
+                "enabled": true
+            },
+            "labels": [
+                "dependencies"
+            ],
+            "prCreation": "immediate",
+            "postUpdateOptions": [
+                "npmDedupe"
+            ],
+            "packageRules": [
+                {
+                    "groupName": "@donmahallem/turbo packages",
+                    "matchPackagePatterns": [
+                        "^@donmahallem/turbo"
+                    ]
+                },
+                {
+                    "groupName": "@typescript-eslint monorepo {{currentVersion}}",
+                    "matchPackagePatterns": [
+                        "^@typescript-eslint/"
+                    ]
+                },
+                {
+                    "groupName": "rollup packages {{currentVersion}}",
+                    "matchPackagePatterns": [
+                        "^@donmahallem/rollup-config$",
+                        "^@rollup/plugin",
+                        "^rollup$",
+                        "^rollup-plugin-dts$"
+                    ],
+                    "matchPackagePrefixes": [
+                        "@rollup/",
+                        "@donmahallem/rollup-config"
+                    ]
+                },
+                {
+                    "groupName": "manniwatch monorepo {{currentVersion}}",
+                    "matchPackagePatterns": [
+                        "^@manniwatch/"
+                    ]
+                },
+                {
+                    "groupName": "nrwl monorepo {{currentVersion}}",
+                    "matchPackagePatterns": [
+                        "^@nrwl/",
+                        "nx"
+                    ]
+                },
+                {
+                    "groupName": "octokit monorepo {{currentVersion}}",
+                    "matchPackagePatterns": [
+                        "^@octokit/"
+                    ]
+                },
+                {
+                    "groupName": "ajv {{currentVersion}}",
+                    "matchPackageNames": [
+                        "ajv",
+                        "ajv-formats"
+                    ],
+                    "matchSourceUrlPrefixes": [
+                        "https://github.com/ajv-validator",
+                        "git+https://github.com/ajv-validator"
+                    ]
+                },
+                {
+                    "rangeStrategy": "pin",
+                    "pin": {
+                        "enabled": true
+                    },
+                    "matchDepTypes": [
+                        "devDependencies"
+                    ]
+                },
+                {
+                    "rangeStrategy": "bump",
+                    "matchDepTypes": [
+                        "dependencies"
+                    ]
+                },
+                {
+                    "rangeStrategy": "replace",
+                    "matchDepTypes": [
+                        "peerDependencies",
+                        "optionalDependencies"
+                    ]
+                },
+                {
+                    "matchPackageNames": [
+                        "renovate"
+                    ],
+                    "extends": [
+                        "schedule:weekly"
+                    ]
+                }
+            ],
+            "vulnerabilityAlerts": {
+                "enabled": true,
+                "labels": [
+                    "security"
+                ]
+            }
+        }
