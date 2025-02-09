@@ -15,6 +15,7 @@
             "postUpdateOptions": [
                 "npmDedupe"
             ],
+            "separateMultipleMajor": true,
             "packageRules": [
                 {
                     "groupName": "@donmahallem/turbo packages",
