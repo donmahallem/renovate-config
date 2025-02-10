@@ -19,14 +19,15 @@
             "packageRules": [
                 {
                     "groupName": "@donmahallem/turbo packages",
-                    "matchPackagePatterns": [
-                        "^@donmahallem/turbo"
+                    "matchPackageNames": [
+                        "@donmahallem/turbo",
+                        "@donmahallem/turbo-**"
                     ]
                 },
                 {
                     "groupName": "@typescript-eslint monorepo {{currentVersion}}",
-                    "matchPackagePatterns": [
-                        "^@typescript-eslint/"
+                    "matchPackageNames": [
+                        "@typescript-eslint/**"
                     ]
                 },
                 {
@@ -44,21 +45,21 @@
                 },
                 {
                     "groupName": "manniwatch monorepo {{currentVersion}}",
-                    "matchPackagePatterns": [
-                        "^@manniwatch/"
+                    "matchPackageNames": [
+                        "@manniwatch/**"
                     ]
                 },
                 {
                     "groupName": "nrwl monorepo {{currentVersion}}",
-                    "matchPackagePatterns": [
-                        "^@nrwl/",
+                    "matchPackageNames": [
+                        "@nrwl/**",
                         "nx"
                     ]
                 },
                 {
                     "groupName": "octokit monorepo {{currentVersion}}",
-                    "matchPackagePatterns": [
-                        "^@octokit/"
+                    "matchPackageNames": [
+                        "@octokit/**"
                     ]
                 },
                 {
